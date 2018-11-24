@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Query #6</h1>
+    <p>Couldn't write a good SQL in one query, so there are multiple</p>
+
+    {% with result=r[0] %}
+        {% include 'table.html' %}
+    {% endwith %}
+    {% with result=r[1] %}
+        {% include 'table.html' %}
+    {% endwith %}
+{% endblock %}

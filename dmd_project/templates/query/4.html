@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Query #4</h1>
+    <form method="POST" action="/query/4">
+        <div class="form-group">
+            <label>Customer</label>
+            <select class="form-control" name="customer_id">
+                {% for customer in customers %}
+                    <option value="{{ customer.id }}" {% if request.form.customer_id == customer.id %}selected{% endif %}>{{ customer.text }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% if result %}
+        {% include 'table.html' %}
+    {% endif %}
+{% endblock %}
+

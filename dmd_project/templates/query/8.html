@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>Query #8</h1>
+    <form method="POST" action="/query/8">
+        <div class="form-group">
+            <label>Starting date</label>
+            <input
+                    type="date"
+                    class="form-control"
+                    placeholder="2018-12-10"
+                    name="date"
+                    {% if request.form.date %}
+                        value="{{ request.form.date }}"
+                    {% endif %}
+            >
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% if result %}
+        {% include 'table.html' %}
+    {% endif %}
+{% endblock %}
+

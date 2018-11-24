@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  python:
+    build: .
+    command: python3 run_frontend.py
+    volumes:
+      - ./:/app
+    ports:
+      - 5000:5000
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+    restart: on-failure
+
+  postgres:
+    image: postgres:10-alpine
+    environment:
+      POSTGRES_USER: 'dmd_project'
+      POSTGRES_PASSWORD: 'dmd_project'
+      POSTGERS_DATABASE: 'dmd_project'
+    volumes:
+      - ./schema_and_data.sql:/docker-entrypoint-initdb.d/schema_and_data.sql

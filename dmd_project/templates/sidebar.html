@@ -1,0 +1,16 @@
+<ul class="nav nav-pills flex-column" id="sidebar">
+    <li class="nav-item">
+        <a href="/custom"
+               class="nav-link {% if request.path == '/custom' %} active {% endif %}">
+            Custom query
+        </a>
+    </li>
+    {% for i in range(1, 11) %}
+        <li class="nav-item">
+            <a href="/query/{{ i }}"
+               class="nav-link {% if request.path == '/query/' + i|string %} active {% endif %}">
+                Query {{ i }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <p>Yeah, I know, SQL injections are destructive, but what if my TA wants to look at the DB directly?</p>
+
+    <form method="POST">
+        <textarea style="font-family: monospace" class="form-control" placeholder="SELECT ..." name="query">{% if request.form.query %}{{ request.form.query }}{% endif %}</textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% if result %}
+        {% include 'table.html' %}
+    {% endif %}
+{% endblock %}

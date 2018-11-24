@@ -1,0 +1,28 @@
+<br>
+
+SQL Source:
+<pre><code class="sql">{{ result.source }}</code></pre>
+
+{% if result.error %}
+    Error:
+    <pre>{{ result.error }}</pre>
+{% endif %}
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            {% for i in result.headings %}
+                <th>{{ i }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in result.rows %}
+            <tr>
+                {% for x in row %}
+                    <td>{{ x }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
