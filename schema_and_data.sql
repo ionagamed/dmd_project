@@ -135,20 +135,33 @@ INSERT INTO cars (color, lat, long, plate_no, type_id, joined_company_at) VALUES
   ('red', 1, 2, 'AN512B', 1, timestamp '2018-10-01 00:00'),
   ('green', 3, 4, 'RU222S', 1, timestamp '2018-10-01 00:00'),
   ('red', 5, 6, 'asdf11', 2, timestamp '2018-10-01 00:00'),
-  ('blue', 7, 8, 'PP567FF', 2, timestamp '2018-10-01 00:00');
+  ('blue', 7, 8, 'PP567FF', 2, timestamp '2018-10-01 00:00'),
+  ('white', 9, 10, 'asdf', 1, timestamp '2018-10-01 00:00'),
+  ('violet', 11, 12, 'ahahah', 2, timestamp '2018-10-01 00:00'),
+  ('metallic', 11, 12, 'samplet3xt', 2, timestamp '2018-10-01 00:00'),
+  ('brown', 13, 14, 'aaasfa', 2, timestamp '2018-10-01 00:00'),
+  ('black', 15, 16, 'ahaha5', 1, timestamp '2018-10-01 00:00'),
+  ('yellow', 17, 18, 'sgdfhdfg', 1, timestamp '2018-10-01 00:00');
 INSERT INTO customers (name, surname, phone_number, email, address) VALUES
   ('Vasiliy', 'Pupkin', '123', 'v.pupkin@localhost', 'Sample st. 1'),
   ('John', 'Doe', '113', 'j.doe@localhost', 'Sample st. 2'),
   ('Jane', 'Doe', '114', 'j.doe@gmail.com', 'Sample st. 2');
 INSERT INTO orders (customer_id, car_id, car_lat, car_long, pickup_lat, pickup_long, dest_lat, dest_long, created_at, pickup_time, finish_time, price) VALUES
-  (1, 2, 7, 6, 10, 10, 15, 15, timestamp '2018-11-10 09:50', timestamp '2018-11-10 10:00', timestamp '2018-11-10 10:08', 100),
-  (1, 1, -2, 5, 10, 10, 15, 15, timestamp '2018-11-11 09:50', timestamp '2018-11-11 10:00', timestamp '2018-11-11 10:08', 100),
-  (2, 2, 7, 6, 100, 10, 15, 15, timestamp '2018-11-10 12:50', timestamp '2018-11-10 13:00', timestamp '2018-11-10 13:08', 100),
-  (1, 3, -2, 5, 100, 10, 15, 15, timestamp '2018-11-12 09:50', timestamp '2018-11-12 10:00', timestamp '2018-11-12 10:08', 100),
-  (3, 2, 7, 6, 10, 10, 15, 15, timestamp '2018-11-10 16:50', timestamp '2018-11-10 17:00', timestamp '2018-11-10 17:08', 100),
-  (2, 1, -2, 5, 0, 10, 15, 15, timestamp '2018-11-10 09:50', timestamp '2018-11-10 10:00', timestamp '2018-11-10 10:08', 100),
-  (1, 2, 7, 6, 180, 10, 15, 15, timestamp '2018-11-10 17:50', timestamp '2018-11-10 18:00', timestamp '2018-11-10 18:08', 100),
-  (1, 4, -2, 5, 110, 10, 15, 15, timestamp '2018-11-13 09:50', timestamp '2018-11-13 10:00', timestamp '2018-11-13 10:08', 100);
+  (1, 2, 7, 6, 10, 10, 15, 15, timestamp '2018-11-26 09:50', timestamp '2018-11-26 10:00', timestamp '2018-11-26 10:08', 100),
+  (1, 1, -2, 5, 10, 10, 15, 15, timestamp '2018-11-25 09:50', timestamp '2018-11-25 10:00', timestamp '2018-11-25 10:08', 100),
+  (2, 2, 7, 6, 100, 10, 15, 15, timestamp '2018-11-24 12:50', timestamp '2018-11-24 13:00', timestamp '2018-11-24 13:08', 100),
+  (1, 3, -2, 5, 100, 10, 15, 15, timestamp '2018-11-23 09:50', timestamp '2018-11-23 10:00', timestamp '2018-11-23 10:08', 100),
+  (3, 2, 7, 6, 10, 10, 15, 15, timestamp '2018-11-22 16:50', timestamp '2018-11-22 17:00', timestamp '2018-11-22 17:08', 100),
+  (2, 1, -2, 5, 0, 10, 15, 15, timestamp '2018-11-21 09:50', timestamp '2018-11-10 10:00', timestamp '2018-11-10 10:08', 100),
+  (1, 2, 7, 6, 180, 10, 15, 15, timestamp '2018-11-20 17:50', timestamp '2018-11-20 18:00', timestamp '2018-11-20 18:08', 100),
+  (1, 4, -2, 5, 110, 10, 15, 15, timestamp '2018-11-19 09:50', timestamp '2018-11-19 10:00', timestamp '2018-11-19 10:08', 100),
+  (1, 5, -2, 5, 10, 10, 15, 15, timestamp '2018-11-18 09:50', timestamp '2018-11-18 10:00', timestamp '2018-11-18 10:08', 100),
+  (2, 6, 7, 6, 100, 10, 15, 15, timestamp '2018-11-17 12:50', timestamp '2018-11-17 13:00', timestamp '2018-11-17 13:08', 100),
+  (1, 7, -2, 5, 100, 10, 15, 15, timestamp '2018-11-16 09:50', timestamp '2018-11-16 10:00', timestamp '2018-11-16 10:08', 100),
+  (3, 6, 7, 6, 10, 10, 15, 15, timestamp '2018-11-15 16:50', timestamp '2018-11-15 17:00', timestamp '2018-11-15 17:08', 100),
+  (2, 5, -2, 5, 0, 10, 15, 15, timestamp '2018-11-14 09:50', timestamp '2018-11-14 10:00', timestamp '2018-11-14 10:08', 100),
+  (1, 6, 7, 6, 180, 10, 15, 15, timestamp '2018-11-13 17:50', timestamp '2018-11-13 18:00', timestamp '2018-11-13 18:08', 100),
+  (1, 8, -2, 5, 110, 10, 15, 15, timestamp '2018-11-12 09:50', timestamp '2018-11-12 10:00', timestamp '2018-11-12 10:08', 100);
 INSERT INTO payments (order_id, paid_at) VALUES
   (1, now()),
   (2, now()),
@@ -157,7 +170,14 @@ INSERT INTO payments (order_id, paid_at) VALUES
   (5, now()),
   (6, now()),
   (7, now()),
-  (8, now());
+  (8, now()),
+  (9, now()),
+  (10, now()),
+  (11, now()),
+  (12, now()),
+  (13, now()),
+  (14, now()),
+  (15, now());
 INSERT INTO charging_stations (lat, long, price_per_minute) VALUES
   (100, 100, 10),
   (0, 0, 15);
@@ -167,8 +187,15 @@ INSERT INTO charging_sockets (shape, size, station_id) VALUES
   ('square', 5, 2),
   ('triangle', 6, 2);
 INSERT INTO socket_occupations (socket_id, car_id, time_begin, time_end) VALUES
-  (1, 1, timestamp '2018-11-10 11:00', timestamp '2018-11-10 11:15'),
-  (1, 1, timestamp '2018-11-10 19:00', timestamp '2018-11-10 19:20');
+  (1, 1, timestamp '2018-11-22 11:00', timestamp '2018-11-22 11:15'),
+  (1, 1, timestamp '2018-11-22 19:00', timestamp '2018-11-22 19:20'),
+  (2, 1, timestamp '2018-11-23 19:00', timestamp '2018-11-23 19:20'),
+  (3, 2, timestamp '2018-11-23 19:00', timestamp '2018-11-23 19:20'),
+  (2, 2, timestamp '2018-11-23 19:00', timestamp '2018-11-23 19:20'),
+  (1, 3, timestamp '2018-11-23 19:00', timestamp '2018-11-23 19:20'),
+  (2, 4, timestamp '2018-11-23 19:00', timestamp '2018-11-23 19:20'),
+  (1, 6, timestamp '2018-11-23 19:00', timestamp '2018-11-23 19:20'),
+  (3, 8, timestamp '2018-11-23 19:00', timestamp '2018-11-23 19:20');
 INSERT INTO workshops (lat, long) VALUES
   (1000, 1000),
   (1001, 1000);
@@ -182,7 +209,14 @@ INSERT INTO repairs (car_id, timestamp, workshop_id) VALUES
   (2, timestamp '2018-10-13 23:00', 1),
   (2, timestamp '2018-10-13 21:00', 1),
   (2, timestamp '2018-10-13 19:00', 1),
-  (1, timestamp '2018-10-24 21:00', 2);
+  (4, timestamp '2018-10-24 21:00', 2),
+  (5, timestamp '2018-10-24 21:00', 2),
+  (6, timestamp '2018-10-24 21:00', 2),
+  (7, timestamp '2018-10-24 21:00', 2),
+  (8, timestamp '2018-10-24 21:00', 2),
+  (7, timestamp '2018-10-24 21:00', 2),
+  (6, timestamp '2018-10-24 21:00', 2),
+  (7, timestamp '2018-10-24 21:00', 2);
 INSERT INTO car_parts (type_id, price, involved_in_repair_id) VALUES
   (1, 100, 1),
   (1, 150, 2),
