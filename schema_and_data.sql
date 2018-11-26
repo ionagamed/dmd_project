@@ -57,8 +57,7 @@ CREATE TABLE IF NOT EXISTS orders (
   price DECIMAL(20, 2) NOT NULL
 );
 CREATE TABLE IF NOT EXISTS payments (
-  id SERIAL PRIMARY KEY,
-  order_id INTEGER REFERENCES orders (id) ON DELETE RESTRICT NOT NULL,
+  order_id INTEGER PRIMARY KEY REFERENCES orders (id) ON DELETE RESTRICT NOT NULL,
   paid_at TIMESTAMP NOT NULL
 
   -- a unique constraint for order_id would be nice

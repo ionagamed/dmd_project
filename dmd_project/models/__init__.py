@@ -95,7 +95,6 @@ JOIN orders ON payments.order_id = orders.id
 WHERE customer_id=%s 
     AND pickup_time > now() - INTERVAL '1 month'
 GROUP BY order_id
-HAVING COUNT(order_id) > 1
     '''
     db.execute(source, [customer_id])
     return QueryResult(db, source)
