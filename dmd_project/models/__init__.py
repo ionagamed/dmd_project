@@ -274,7 +274,7 @@ GROUP BY customers.id
 def query_9():
     db = connect_to_db()
     source = '''
-SELECT
+SELECT DISTINCT ON (1)
   workshops.id AS workshop_id,
   car_part_name,
   AVG(per_week_counts) AS avg_per_week
@@ -290,7 +290,7 @@ JOIN (
   GROUP BY (car_part_types.name, EXTRACT(WEEK FROM repairs.timestamp), repairs.workshop_id)
 ) AS counts ON workshop_id = workshops.id
 GROUP BY (workshops.id, car_part_name)
-ORDER BY avg_per_week DESC
+ORDER BY workshop_id, avg_per_week DESC
     '''
     db.execute(source)
     return QueryResult(db, source)
